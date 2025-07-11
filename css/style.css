@@ -564,8 +564,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .quienesSomos {
-  color: #FFB000;
+  color: #000;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.quienesSomos:hover {
+  color: #FFB000;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #about .content ul {
