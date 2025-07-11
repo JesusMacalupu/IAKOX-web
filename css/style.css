@@ -575,6 +575,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   cursor: pointer;
 }
 
+.finalFooter {
+  color: #FFB000;
+  font-weight: bold;
+}
+
 #about .content ul {
   list-style: none;
   padding: 0;
