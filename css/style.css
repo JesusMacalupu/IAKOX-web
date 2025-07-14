@@ -1008,6 +1008,159 @@ form .form-control:focus {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
+/************** MODAL DEL CHAT BOT DE LA PAGINA ****************/
+
+.modal-bot {
+  display: none;
+  position: fixed;
+  bottom: calc(20px + 67px);
+  right: calc(20px + 67px);
+  width: 400px;
+  background-color: #fff;
+  border: 2px solid #6e6e6e;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 9998;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-bot::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid #fff;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-bot-header {
+  background-color: #1f3d7a;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 16px;
+  position: relative;
+}
+
+.modal-bot-header .close-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: #ffb000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-bot-header .close-btn:hover {
+  color: #e09c00;
+}
+
+.modal-bot-body {
+  background: #f9f9f9;
+  padding: 12px;
+  max-height: 280px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+.bot-bubble,
+.user-bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  font-size: 15px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeSlideIn 0.3s forwards;
+}
+
+.bot-bubble {
+  background: #ececec;
+  color: #333;
+  align-self: flex-start;
+  border-top-left-radius: 4px;
+}
+
+.user-bubble {
+  background: #ffb000;
+  color: #fff;
+  align-self: flex-end;
+  border-top-right-radius: 4px;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-bot-footer {
+  padding: 8px;
+  background-color: #f4f4f4;
+  display: flex;
+  gap: 6px;
+}
+
+.modal-bot-footer input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px; 
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.modal-bot-footer input:focus {
+  border: 3px solid #ffb000;
+}
+
+.modal-bot-footer button {
+  width: 40px;
+  height: 40px;
+  background-color: #ffb000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-bot-footer button:hover {
+  background-color: #e09c00;
+}
+
+.modal-bot-footer button i {
+  color: #fff;
+  font-size: 20px;
+}
+
 /* Responsive: en pantallas pequeñas reducir tamaño */
 @media (max-width: 768px) {
   .chatbot-button {
