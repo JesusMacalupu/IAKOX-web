@@ -34,32 +34,6 @@ h6 {
   padding: 0;
 }
 
-/* Back to top button */
-
-.back-to-top {
-  position: fixed;
-  display: none;
-  background: #FFB000;
-  color: #fff;
-  padding: 6px 12px 9px 12px;
-  font-size: 16px;
-  border-radius: 2px;
-  right: 15px;
-  bottom: 15px;
-  transition: background 0.5s;
-}
-
-.back-to-top:focus {
-  background: #FFB000;
-  color: #fff;
-  outline: none;
-}
-
-.back-to-top:hover {
-  background: #1f3d71;
-  color: #fff;
-}
-
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -1008,6 +982,51 @@ form .form-control:focus {
   color: white;
   font-weight: bold;
   font-size: clamp(1rem, 2vw, 2rem);
+}
+
+/************* BOTON DE CHAT BOT **************/
+
+.chatbot-button {
+  width: 67px;
+  height: 67px;
+  background-color: #FFB000;
+  color: white;
+  border: 4px solid #6e6e6e;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chatbot-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive: en pantallas pequeñas reducir tamaño */
+@media (max-width: 768px) {
+  .chatbot-button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-button {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 
 /*--------------------------------------------------------------
