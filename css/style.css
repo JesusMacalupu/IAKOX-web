@@ -1008,6 +1008,27 @@ form .form-control:focus {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Responsive: en pantallas pequeñas reducir tamaño */
+@media (max-width: 768px) {
+  .chatbot-button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-button {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
 /************** MODAL DEL CHAT BOT DE LA PAGINA ****************/
 
 .modal-bot {
@@ -1016,6 +1037,7 @@ form .form-control:focus {
   bottom: calc(20px + 67px);
   right: calc(20px + 67px);
   width: 400px;
+  max-width: 90%;
   background-color: #fff;
   border: 2px solid #6e6e6e;
   border-radius: 12px;
@@ -1161,24 +1183,65 @@ form .form-control:focus {
   font-size: 20px;
 }
 
-/* Responsive: en pantallas pequeñas reducir tamaño */
 @media (max-width: 768px) {
-  .chatbot-button {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    bottom: 15px;
-    right: 15px;
+  .modal-bot {
+    width: 90%;
+    right: 20px;
+    bottom: 80px;
+    font-size: 14px;
+  }
+
+  .modal-bot-header {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  .modal-bot-footer input {
+    font-size: 13px;
+  }
+
+  .bot-bubble,
+  .user-bubble {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .chatbot-button {
-    width: 45px;
-    height: 45px;
-    font-size: 16px;
-    bottom: 10px;
+  .modal-bot {
+    width: 95%;
     right: 10px;
+    bottom: 70px;
+    font-size: 13px;
+  }
+
+  .modal-bot-header {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+
+  .modal-bot-header .close-btn {
+    font-size: 24px;
+  }
+
+  .modal-bot-body {
+    max-height: 220px;
+  }
+
+  .modal-bot-footer input {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .modal-bot-footer button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .bot-bubble,
+  .user-bubble {
+    font-size: 13px;
+    max-width: 90%;
   }
 }
 
